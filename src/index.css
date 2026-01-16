@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.header {
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header select {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+}
+
+.sidebar {
+  width: 200px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 14px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  color: #334155;
+}
+
+.sidebar button:hover {
+  background: #f1f5f9;
+}
+
+.sidebar button.active {
+  background: #e0f2fe;
+  color: #0284c7;
+  font-weight: 500;
+}
+
+.main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+.card h4 {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.list-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item span {
+  font-size: 14px;
+}
+
+.list-item button {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #0284c7;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.list-item button:hover {
+  background: #0369a1;
+}
+
+.list-item select {
+  margin-left: 10px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+}
+
+.settings {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 14px;
+}
