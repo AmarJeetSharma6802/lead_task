@@ -1,16 +1,10 @@
-# React + Vite
+I used Context API in this project because I needed to use the same data and state in multiple files. Without Context, I would have to pass data using props, which is not the best approach. The Admin / Agent role in the header and role-based sidebar logic would also be difficult to manage without Context.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+setData(tenants[org]) means taking the selected organization’s data from the tenants object. I used switchTenant inside onChange because the user is selecting the organization, and the selected value is passed to Context as a parameter.
 
-Currently, two official plugins are available:
+While updating leads, I used:
+const updated = [...data.leads];
+updated[index].status = status;
+setData({ ...data, leads: updated });
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This same update logic was already used in my Todo List project, so I reused the same safe React pattern here.
